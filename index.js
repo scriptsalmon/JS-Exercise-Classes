@@ -137,6 +137,10 @@ class Lambdasian {
     this.age = myObj.age;
     this.location = myObj.location;
   }
+
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
+  }
 }
 
 const myObj = {
@@ -144,6 +148,10 @@ const myObj = {
   age: '99',
   location: 'Now-here'
 };
+
+const alan = new Lambdasian(myObj);
+
+console.log('task 3', alan);
 
 /*
   TASK 4
