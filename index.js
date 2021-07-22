@@ -116,7 +116,7 @@ const trueno = new Car('AE86', '20');
 
 console.log('task 2', trueno);
 trueno.fill(40);
-trueno.drive(100);
+trueno.drive(80);
 console.log('task 2', trueno);
 
 /*
@@ -226,17 +226,20 @@ class Student extends Lambdasian{
    }
 
    listSubjects(){
-     return this.favSubjects;
+     return `Loving ${this.favSubjects}!`;
    }
 
    PRAssignment(subject){
-     return `${student.name} has submitted a PR for ${subject}`;
+     return `${this.name} has submitted a PR for ${subject}.`;
    }
 
    sprintChallenge(subject){
-    return `${student.name} has begun sprint challenge on ${subject}`;
+    return `${this.name} has begun sprint challenge on ${subject}`;
    }
-}
+};
+
+const newBully = new Student('Jean', '19', 'Slums', 'some community college', 'Web32', ['Mechanics', 'Welding', 'Robotics']);
+console.log('task 5', newBully);
 
 /*
   TASK 6
@@ -251,8 +254,11 @@ class Student extends Lambdasian{
         + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
-class ProjectManager {
-   
+class ProjectManager extends Instructor{
+   constructor({name, age, location, specialty, favLanguage, catchPhrase}){
+     super({name, age, location, specialty, favLanguage, catchPhrase});
+     
+   }
 }
 /*
   STRETCH PROBLEM (no tests!)
